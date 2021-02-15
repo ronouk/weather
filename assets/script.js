@@ -35,7 +35,7 @@ function retrieveInformation(){
     mainInformation.style.visibility="visible";
 
     const searchText = searchBox.value;
-    const weatherApi = `http://api.openweathermap.org/data/2.5/forecast?q=${searchText}&appid=14bc58813644ccff3cc2a5f19dec496b`;
+    const weatherApi = `https://api.openweathermap.org/data/2.5/forecast?q=${searchText}&appid=14bc58813644ccff3cc2a5f19dec496b`;
     
     fetch(weatherApi)
     .then(res => res.json())
