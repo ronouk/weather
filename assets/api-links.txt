@@ -1,0 +1,4 @@
+Weather api: https://openweathermap.org/api
+Random Joke api: https://api.chucknorris.io/
+
+Example: https://api.openweathermap.org/data/2.5/weather?q=dhaka&appid=14bc58813644ccff3cc2a5f19dec496b

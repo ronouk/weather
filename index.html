@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather tracker</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <!-- HTML starts -->
+    <main>
+        <!-- Search section -->
+        <section class="search-section">
+            <h2 class="search-title">Enter city name: </h2>
+            <input id="search-box" type="text">
+            <button id="search-button">Search</button>
+        </section>
+
+        <!-- Information section -->
+        <section class="weather-information-box">
+            <div id="main-information">
+                <p id="city-name"></p>
+                <p id="temperature"></p>
+                <p id="weather-status-icon">
+                    <span id="status-sun" class="status-icon"><i class="fas fa-sun"></i></span>
+                    <span id="status-rain" class="status-icon"><i class="fas fa-cloud-rain"></i></span>
+                    <span id="status-winter" class="status-icon"><i class="fas fa-snowflake"></i></span>
+                    <span id="status-cloud" class="status-icon"><i class="fas fa-cloud-sun"></i></span>
+                </p>
+                <p id="weather-status-text"></p>
+                <blockquote id="random-joke"></blockquote>
+            </div>
+
+            <div id="error-message">No country or city found</div>
+        </section>
+
+    </main>
+    <!-- HTML ends -->
+
+    <!-- Main Script -->
+    <script src="assets/script.js"></script>
+
+    <!-- Fontawesome Script -->
+    <script src="https://kit.fontawesome.com/638a39bdd7.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
