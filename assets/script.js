@@ -67,7 +67,7 @@ function retrieveInformation(){
         }
 
         else{
-            displayWeatherIcon("none", "none", "none", "block");
+            displayWeatherIcon("none", "block", "none", "none");
             document.body.style.backgroundImage = 'url(./assets/images/rainy-day.jpg)';
         }
 
