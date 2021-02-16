@@ -52,23 +52,19 @@ function retrieveInformation(){
 
         //Sun, rain, winter, cloud icon
         if(weatherDescription == 'Clouds'){
-            displayWeatherIcon("none", "none", "none", "block");
-            document.body.style.backgroundImage = 'url(./assets/images/cloudy-day.jpg)';
+            displayWeatherIcon("none", "none", "none", "block", "cloudy");
         }
 
         else if(weatherDescription == 'Snow'){
-            displayWeatherIcon("none", "none", "block", "none");
-            document.body.style.backgroundImage = 'url(./assets/images/winter-day.jpg)';
+            displayWeatherIcon("none", "none", "block", "none", "winter");
         }
 
         else if(weatherDescription == 'Clear'){
-            displayWeatherIcon("block", "none", "none", "none");
-            document.body.style.backgroundImage = 'url(./assets/images/sunny-day.jpg)';
+            displayWeatherIcon("block", "none", "none", "none", "sunny");
         }
 
         else{
-            displayWeatherIcon("none", "block", "none", "none");
-            document.body.style.backgroundImage = 'url(./assets/images/rainy-day.jpg)';
+            displayWeatherIcon("none", "block", "none", "none", "rainy");
         }
 
     })
@@ -89,9 +85,11 @@ function retrieveInformation(){
 };
 
 // icon display function
-function displayWeatherIcon(value1, value2, value3, value4){
+function displayWeatherIcon(value1, value2, value3, value4, value5){
     statusSun.style.display=value1;
     statusRain.style.display=value2;
     statusWinter.style.display=value3;
     statusCloud.style.display=value4;
+    const bgURL = `url(./assets/images/${value5}-day.jpg)`;
+    document.body.style.backgroundImage = bgURL;
 }
