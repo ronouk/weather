@@ -50,35 +50,24 @@ function retrieveInformation(){
         const weatherDescription = data.list[0].weather[0].main;
         console.log(weatherDescription);
 
+        //Sun, rain, winter, cloud icon
         if(weatherDescription == 'Clouds'){
-            statusCloud.style.display='block';
-            statusWinter.style.display='none';
-            statusSun.style.display='none';
-            statusRain.style.display='none';
+            displayWeatherIcon("none", "none", "none", "block");
             document.body.style.backgroundImage = 'url(./assets/images/cloudy-day.jpg)';
         }
 
         else if(weatherDescription == 'Snow'){
-            statusCloud.style.display='none';
-            statusWinter.style.display='block';
-            statusSun.style.display='none';
-            statusRain.style.display='none';
+            displayWeatherIcon("none", "none", "block", "none");
             document.body.style.backgroundImage = 'url(./assets/images/winter-day.jpg)';
         }
 
         else if(weatherDescription == 'Clear'){
-            statusCloud.style.display='none';
-            statusWinter.style.display='none';
-            statusSun.style.display='block';
-            statusRain.style.display='none';
+            displayWeatherIcon("block", "none", "none", "none");
             document.body.style.backgroundImage = 'url(./assets/images/sunny-day.jpg)';
         }
 
         else{
-            statusCloud.style.display='none';
-            statusWinter.style.display='none';
-            statusSun.style.display='none';
-            statusRain.style.display='block';
+            displayWeatherIcon("none", "none", "none", "block");
             document.body.style.backgroundImage = 'url(./assets/images/rainy-day.jpg)';
         }
 
@@ -97,4 +86,12 @@ function retrieveInformation(){
         randomJoke.innerText = data.value;
     });
     searchBox.value = '';
+};
+
+// icon display function
+function displayWeatherIcon(value1, value2, value3, value4){
+    statusSun.style.display=value1;
+    statusRain.style.display=value2;
+    statusWinter.style.display=value3;
+    statusCloud.style.display=value4;
 }
